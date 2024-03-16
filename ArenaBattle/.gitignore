@@ -22,4 +22,10 @@ bin/*.txt
 doc/**/*.pdf
 
 # My Ignore
-TestMap/Binaries/*
+.vs/*
+Binaries/*
+DerivedDataCache/*
+Intermediate/*
+.vsconfig
+*.sin
+saved/*
