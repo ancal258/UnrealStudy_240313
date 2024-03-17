@@ -25,13 +25,7 @@ doc/**/*.pdf
 .vs/*
 Binaries/*
 DerivedDataCache/*
-Intermediate/Build/*
-Intermediate/Config/*
-Intermediate/ReimportCache/*
-Intermediate/ShaderAutogen/*
-Intermediate/CachedAssetRegistry.bin
-Intermediate/TargetInfo.json
-Intermediate/ProjectFiles/UE5.*
+Intermediate/*
 .vsconfig
 *.sin
 saved/*
