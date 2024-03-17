@@ -2,4 +2,34 @@
 
 
 #include "Character/ABCharacterPlayer.h"
+#include "Camera/CameraComponent.h"
+#include "GameFramework/SpringArmComponent.h"
 
+
+AABCharacterPlayer::AABCharacterPlayer()
+{
+	CameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraBoom"));
+	CameraBoom->SetupAttachment(RootComponent);
+	CameraBoom->TargetArmLength = 400.0f;
+	CameraBoom->bUsePawnControlRotation = true;
+
+	FollowCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("FollowCamera"));
+	FollowCamera->SetupAttachment(CameraBoom, USpringArmComponent::SocketName);
+	FollowCamera->bUsePawnControlRotation = false;
+}
+
+void AABCharacterPlayer::BeginPlay()
+{
+}
+
+void AABCharacterPlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+{
+}
+
+void AABCharacterPlayer::Move(const FInputActionValue& Value)
+{
+}
+
+void AABCharacterPlayer::Look(const FInputActionValue& Value)
+{
+}
